@@ -91,72 +91,43 @@ h6 {
 
 body {
     font-family: sans-serif;
-    background: url('../tablecloth.jpg');
-}
-
-.title {
-    text-align: center;
-    padding: 20px 0 0px 0;
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(126, 103, 30);
 }
 
 .container {
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 300px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 15px;
 }
 
-.card {
-    background: rgb(219, 219, 219);
-    width: 60px;
-    border-radius: 3.5px;
-    padding: 0 0 80px 0;
-    overflow: hidden;
+/* h1 {
     position: relative;
-    cursor: pointer;
 }
 
-.card__img {
-    width: 100%;
-    /* width: 0; */
-    height: 100%;
-    object-fit: cover;
+h1::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    transition: width .3s ease 0s, opacity .3s ease .3s;
-    opacity: 1;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    z-index: 10;
+} */
+
+.btnSort {
+    background: #212529;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    transition: background 0.2s ease;
+    padding: .5rem .5rem;
+    text-align: left;
 }
 
-.open .card__img {
-    width: 0;
-    opacity: 0;
+.btnSort:hover {
+    background: #363b41;
 }
-
-.text {
-    font-size: 60px;
-    position: absolute;
-    top: 10px;
-    left: 13px;
-}
-
-.closed{
-    background: rgb(136, 136, 136);
-    transform: scale(0.85);
-}
-
-.closed .card__img {
-    width: 0;
-    opacity: 0;
-
-}
-
-
 
 
 /* конец */
