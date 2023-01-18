@@ -47,6 +47,7 @@ let listData = [
 
 
 let data = new Date().getDate() + '-' + new Date().getMonth() + 1 + '-' + new Date().getFullYear();
+let dataRewers = new Date().getFullYear() + '-' + new Date().getMonth() + 1 + '-' + new Date().getDate();
 
 let sortColumnFlsg = 'fio',
     sortDirFlag = true
@@ -62,13 +63,7 @@ const $inputLastname = document.getElementById('add-form__lastname-inp');
 const $inputAge = document.getElementById('add-form__age-inp');
 const $startDate = document.getElementById('add-form__startDate-inp');
 const $inputHobby = document.getElementById('add-form__hobby-inp');
-// const $formButton = document.getElementById('button');
-
-
-// кнопки для сотировки
-// const $sortFIOBtn = document.getElementById('sort__fio');
 const $sortAgeBtn = document.getElementById('sort__age');
-
 
 // таблица
 const $app = document.getElementById('app');
@@ -118,13 +113,6 @@ $btnAge.classList.add('btnSort')
 $btnAge.textContent = 'Дата рождения и возраст'
 $tableHeadThAge.style.padding = '0px'
 $tableHeadThAge.append($btnAge)
-
-
-
-
-
-
-
 
 $tableHeadTr.append($tableHeadThFIO)
 $tableHeadTr.append($tableHeadThAge)
@@ -263,12 +251,13 @@ $addForm.addEventListener('submit', function (event) {
         return
     }
 
-    if ($inputAge.value < '1900-01-01' || $inputAge.value > data) {
+    if ($inputAge.value < '1900-01-01' || $inputAge.value > dataRewers){
         alert('не правильно введён возраст')
         return
+        
     }
 
-    if ($startDate.value < '2000-01-01' || $startDate.value > data) {
+    if ($startDate.value < '2000-01-01' || $startDate.value > dataRewers) {
         alert('не правильно введён год начала обучения')
         return
     }
@@ -277,10 +266,6 @@ $addForm.addEventListener('submit', function (event) {
         alert('не введено название факультета')
         return
     }
-
-
-
-
 
     listData.push({
         // .trim() уберёт все пробелы слва и справа
